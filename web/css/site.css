@@ -1,0 +1,343 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+.message-box{
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.message-button{
+    background-color: #ff654f; /* Green */
+    border: none;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.message-button:hover{
+    background-color: rgb(255, 99, 51);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.message-form{
+    z-index: 1;
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+	max-width: 450px;
+	background: #FAFAFA;
+	padding: 10px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+    /* border: 6px solid #305A72; */
+}
+
+.message-close{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.message-close:hover,
+.message-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p.admin-message {
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    position: relative;
+    top: 0;
+	width: 200px;
+    text-align: center;
+	line-height: 20px;
+	background-color: #fff;
+	border: 1px solid #aaaaaa;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+p.admin-message:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: -10px;
+    top: 15px;
+	border: 5px solid transparent;
+	border-right: 5px solid #666;
+}
+
+p.admin-message:after { 
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: -9px;
+    top: 15px;
+	border: 5px solid transparent;
+	border-right: 5px solid #fff;
+}
+
+img.sender-img {
+    display: inline;
+    border-radius: 8px;
+}
+
+.grid-conteiner{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+    margin: 5px 5px;
+}
+
+.messanger-items{
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding-top: 15px;
+	text-align: center;
+}
+
+.messanger-items button{
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100%;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.flex-conteiner{
+    display: flex;
+}
+
+.message-input {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.message-input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.message-input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.message-input:valid {
+    border-color: green;
+}
+
+.message-input:invalid {
+    border-color: red;
+}
+
+.message-form div div form{
+    display: none;
+}
+
+p.form-pointer{
+    display: inline-block;
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 175px;
+    text-align: center;
+    font-weight: 500;
+	line-height: 20px;
+	background-color: #fff;
+	/* border: 1px solid #aaaaaa; */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 3px #888;
+	-moz-box-shadow: 1px 1px 3px #888;
+	box-shadow: 1px 1px 3px #888;
+}
+
+p.form-pointer:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    right: -10px;
+    bottom: 25px;
+	border: 5px solid transparent;
+	border-left: 5px solid #aaaaaa;;
+}
+
+p.form-pointer:after { 
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    right: -9px;
+    bottom: 25px;
+	border: 5px solid transparent;
+	border-left: 5px solid #fff;
+}
+
